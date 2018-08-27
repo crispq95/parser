@@ -38,19 +38,19 @@ size_job=SimExtDetector_pkg
 
 ## paths settings 
 
-* folder_path: path where the data folder will be found 
-* workdir_path: path of the data folder 
+* **folder_path :** path where the data folder will be found 
+* **workdir_path :** path of the data folder 
 
 
 ## limits settings
 
-* RAM: Memory limit (GB)
-* IOW: IO writes limit (GB)
+* **RAM :** Memory limit (GB)
+* **IOW :** IO writes limit (GB)
 
 ## jobs_info
 
-* job_names: Name of the jobs to analize inside workdir_path folder. Must be separated by commas. 
-* size_job: Name of the job that will be used to set the size of the plot. Its convenient that it is the type of job with more csv usage files. 
+* **job_names :** Name of the jobs to analize inside workdir_path folder. Must be separated by commas. 
+* **size_job :** Name of the job that will be used to set the size of the plot. Its convenient that it is the type of job with more csv usage files. 
 
 
 # Parsing the csv usage files 
@@ -103,19 +103,21 @@ Everything is prepared to run by executing up_run.py.
 ```
 Where: 
 
-* -s : Shows the stats for the provided folder(s). 
-* -plt : Saves into a pdf with the name of the folder the plots for each folder. 
+* **-s :** Shows the stats for the provided folder(s). 
+* **-plt :** Saves into a pdf with the name of the folder the plots for each folder. 
 
 Default value for both -s and -plt are True. 
 
 There are also some other arguments that are not mandatory : 
 
 
-* -wdr : Whole directory to the log folder containing usage files [example: /pnfs/pic.es/data/astro/euclid/disk/storage/SC456/workdir_SC456_EXT_KIDS_T1_\*\/log]
-* -j : List separated by commas with the job names inside the folder(s) 
-* -size_job : 
-* -m : Changes memory limit (GB)
-* -w : Changes IO writes limit (GB)
+* **-wdr :** Whole directory to the log folder containing usage files [example: /pnfs/pic.es/data/astro/euclid/disk/storage/SC456/workdir_SC456_EXT_KIDS_T1_\*\/log]
+* **-j :** List separated by commas with the job names inside the folder(s) 
+* **-size_job :** job that will be used to choose the amount of data displayed on the plots (default 62) 
+* **-m :** Changes memory limit (GB)
+* **-w :** Changes IO writes limit (GB)
+
+If you would like to see all the available arguments '**-h**' will list them with plus how to use them. 
 
 
 
