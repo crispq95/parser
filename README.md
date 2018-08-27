@@ -63,6 +63,7 @@ size_job=SimExtDetector_pkg
 * job_names: Name of the jobs to analize inside workdir_path folder. Must be separated by commas. 
 * size_job: Name of the job that will be used to set the size of the plot. Its convenient that it is the type of job with more csv usage files. 
 
+
 # Parsing the csv usage files 
 
 First you must load the data from csv folder(s). 
@@ -74,11 +75,17 @@ parser.load_data(jobs, set_size_job)
 
 ```
 
-Then you need to 
+Then you need to plot the provided data as shown below : 
 
+```
+parser.plot_all_jobs()
 
+```
+
+Once its done you'll find on the folder ./plot that a number of .pdf equal to the number of folders provided has been created, inside of each .pdf there is the data of all the jobs contained on each folder classified per type of job. It should look like :
 
 ![stats](img/plots.png)
+
 
 # Getting job stats by folder
 
@@ -120,7 +127,7 @@ Default value for both -s and -plt are True.
 There are also some other arguments that are not mandatory : 
 
 
-* -wdr :
+* -wdr : 
 * -j :
 * -size_job :
 * -m : Changes memory limit (GB)
