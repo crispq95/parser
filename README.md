@@ -70,7 +70,6 @@ Then you need to plot the provided data as shown below :
 parser.plot_all_jobs()
 
 ```
-
 Once its done you'll find in the folder ./plot that a number of .pdf equal to the number of folders provided has been created. Inside of each .pdf there is the data of all the jobs contained on each folder classified per type of job. It should look like :
 
 ![stats](img/plots.png)
@@ -89,7 +88,6 @@ To do so, first load the data from csv folder(s) as shown before and then call:
 
 ```
 parser.get_job_stats()
-
 ```
 Output should be similar to : 
 
@@ -102,9 +100,7 @@ Everything is prepared to run by executing up_run.py.
 
 ```
 > python up_run.py -s -plt
-
 ```
-
 Where: 
 
 * -s : Shows the stats for the provided folder(s). 
