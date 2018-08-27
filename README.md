@@ -78,7 +78,7 @@ If you'd like to change the folder where plots are stored you should change the 
 
 ```
 for d in self.data: 
-	with PdfPages(('\**/nfs/pic.es/user/c/cperalta/python_envs/python_3.5.1/cosasAcabadas/parser/plots/\**'+d.parent_folder.split('/')[-2]+'.pdf')) as pdf:
+	with PdfPages(('\*\*/nfs/pic.es/user/c/cperalta/python_envs/python_3.5.1/cosasAcabadas/parser/plots/\*\*'+d.parent_folder.split('/')[-2]+'.pdf')) as pdf:
 ```
 
 # Getting job stats by folder
