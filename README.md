@@ -42,7 +42,7 @@ IOW=10
 job_names=SimExtDetector_pkg,SimTU_pkg,SimPlanner_pkg
 size_job=SimExtDetector_pkg
 
-´´´
+```
 
 ## paths settings 
 
@@ -69,7 +69,7 @@ parser = up.Usage_Parser2(whole_workdir,jobs,mem=memory_limit, wr=iow_limit)
 
 parser.load_data(jobs, set_size_job)
 
-´´´
+```
 
 Then you need to 
 
