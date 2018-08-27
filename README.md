@@ -1,9 +1,12 @@
 # Project Title
 
-
+Gets 
 
 ## Getting Started
 
+There are 2 main scripts on this project. 
+
+* 
 
 
 
@@ -75,25 +78,27 @@ Then you need to
 
 
 
-
+![stats](img/plots.png)
 
 # Getting job stats by folder
 
-For every provided folder you can get ordered by type of job the mean and maximum of : 
+For every provided folder you can get (ordered by type of job) the mean and maximum of : 
 
 * Time spent 
 * CPU % usage
 * RSS (GB)
 * IO writes (GB)
 
-To do so, first load the data from csv folder(s) as shown before and then call
+To do so, first load the data from csv folder(s) as shown before and then call:
 
 ```
 parser.get_job_stats()
 
 ```
+Output should be similar to : 
 
 ![stats](img/stats_result.png)
+
 
 # usageparser_run 
 
@@ -103,7 +108,7 @@ Everything is prepared to run by executing up_run.py.
 
 > python up_run.py -s -plt
 
-´´´
+```
 
 Where: 
 
