@@ -74,11 +74,10 @@ Once its done you'll find in the folder ./plot that a number of .pdf equal to th
 ![stats](img/plots.png)
 
 
-If you'd like to change the folder where plots are stored you should change the path shown as bold text below inside usage_parser.py/plot_all_jobs()
+If you'd like to change the folder where plots are stored you should change the path inside usage_parser.py/plot_all_jobs()
 
 ```
-for d in self.data: 
-	with PdfPages(('\*\*/nfs/pic.es/user/c/cperalta/python_envs/python_3.5.1/cosasAcabadas/parser/plots/\*\*'+d.parent_folder.split('/')[-2]+'.pdf')) as pdf:
+path = '/nfs/pic.es/user/c/cperalta/python_envs/python_3.5.1/cosasAcabadas/parser/plots/'
 ```
 
 # Getting job stats by folder
