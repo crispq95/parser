@@ -1,32 +1,20 @@
 # Project Title
 
-Gets 
+
 
 ## Getting Started
 
 There are 2 main scripts on this project. 
 
-* 
+* usageparser_run.py : Provides an easy way to execute 
+* usage_parser.py : Class used to parse the data from csv(s) inside one or more folders into plots or to get the mean/max stats per typer of job. 
 
+There are 2 folders on the project: 
 
+* conf : Stores the configuration file 
+* plots : Stores the plots created by usageparser_run.py calls. 
 
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
+Every argument that can be used on usageparser_run.py is explained below on "usageparser_run" paragraph.
 
 # Configuration
 
@@ -46,6 +34,7 @@ job_names=SimExtDetector_pkg,SimTU_pkg,SimPlanner_pkg
 size_job=SimExtDetector_pkg
 
 ```
+
 
 ## paths settings 
 
@@ -82,7 +71,7 @@ parser.plot_all_jobs()
 
 ```
 
-Once its done you'll find on the folder ./plot that a number of .pdf equal to the number of folders provided has been created, inside of each .pdf there is the data of all the jobs contained on each folder classified per type of job. It should look like :
+Once its done you'll find in the folder ./plot that a number of .pdf equal to the number of folders provided has been created. Inside of each .pdf there is the data of all the jobs contained on each folder classified per type of job. It should look like :
 
 ![stats](img/plots.png)
 
@@ -112,7 +101,6 @@ Output should be similar to :
 Everything is prepared to run by executing up_run.py. 
 
 ```
-
 > python up_run.py -s -plt
 
 ```
@@ -127,9 +115,9 @@ Default value for both -s and -plt are True.
 There are also some other arguments that are not mandatory : 
 
 
-* -wdr : 
-* -j :
-* -size_job :
+* -wdr : Whole directory to the log folder containing usage files [example: /pnfs/pic.es/data/astro/euclid/disk/storage/SC456/workdir_SC456_EXT_KIDS_T1_\*\/log]
+* -j : List separated by commas with the job names inside the folder(s) 
+* -size_job : 
 * -m : Changes memory limit (GB)
 * -w : Changes IO writes limit (GB)
 
