@@ -79,10 +79,10 @@ Once its done you'll find in the folder ./plot that a number of .pdf equal to th
 
 For every provided folder you can get (ordered by type of job) the mean and maximum of : 
 
-* Time spent 
-* CPU % usage
-* RSS (GB)
-* IO writes (GB)
+* **Time spent** 
+* **CPU % usage**
+* **RSS (GB)**
+* **IO writes (GB)**
 
 To do so, first load the data from csv folder(s) as shown before and then call:
 
