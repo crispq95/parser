@@ -6,9 +6,9 @@
 
 There are 2 main scripts on this project. 
 
-* usageparser_run.py : Provides an easy way to execute 
-* usage_parser.py : Class used to parse the data from csv(s) inside one or more folders into plots or to get the mean/max stats per typer of job. 
-
+* **usageparser_run.py :** Provides an easy way to execute 
+* **usage_parser.py :** Class used to parse the data from csv(s) inside one or more folders into plots or to get the mean/max stats per typer of job. 
+	
 There are 2 folders on the project: 
 
 * conf : Stores the configuration file 
@@ -34,7 +34,6 @@ job_names=SimExtDetector_pkg,SimTU_pkg,SimPlanner_pkg
 size_job=SimExtDetector_pkg
 
 ```
-
 
 ## paths settings 
 
@@ -74,6 +73,13 @@ Once its done you'll find in the folder ./plot that a number of .pdf equal to th
 
 ![stats](img/plots.png)
 
+
+If you'd like to change the folder where plots are stored you should change the path shown as bold text below inside usage_parser.py/plot_all_jobs()
+
+```
+for d in self.data: 
+	with PdfPages(('**/nfs/pic.es/user/c/cperalta/python_envs/python_3.5.1/cosasAcabadas/parser/plots/**'+d.parent_folder.split('/')[-2]+'.pdf')) as pdf:
+```
 
 # Getting job stats by folder
 
