@@ -24,8 +24,8 @@ def parse_main_args():
 	parser.add_argument("--memlim", "-m", required=False, help="Job RAM limit (GB)", type=int)
 	parser.add_argument("--writlim", "-w", required=False, help="Job write limit (GB)", type=int)
 
-	parser.add_argument("--stats", "-s", required=False, type=str2bool, nargs='?', default=False, help="Show jobs stats.")
-	parser.add_argument("--plot", "-pl", required=False, type=str2bool, nargs='?', default=False, help="Plot jobs stats.")
+	parser.add_argument("--stats", "-s", required=True, type=str2bool, nargs='?', default=True, help="Show jobs stats. (yes,true.y.t.1)")
+	parser.add_argument("--plot", "-pl", required=True, type=str2bool, nargs='?', default=True, help="Plot jobs stats. (no,false,f,n,0)")
 
 	args = parser.parse_args()
 	return args
