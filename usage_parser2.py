@@ -107,7 +107,6 @@ class Usage_Parser2():
 		for fld in folders: 
 			usg = glob.glob(fld+"/*/usage_*")
 			dic = {}
-
 			for j in self.selected_jobs:
 				p = re.compile('(.*)'+j)
 				
@@ -191,7 +190,6 @@ class Usage_Parser2():
 								Job that will be used to fix the size of the plots 
 		"""
 		self.load_usage_files()		#Loads ALL the usage files from the parent folder 
-
 
 		i=0
 		for d in self.data:
@@ -573,7 +571,7 @@ class Usage_Parser2():
 		for val in self.data: 
 			#Prints MAX/PEAK values for cpu%, time(s), rss(GB) and GB written by all jobs of the same kind  
 			print('')
-			print ("CARPETA : ", val.parent_folder, " ______ ")
+			print ("FOLDER : ", val.parent_folder, " ______ ")
 			print('')
 
 			for j in self.selected_jobs :
@@ -594,10 +592,11 @@ class Usage_Parser2():
 
 
 		"""
+		path = '/home/cperalta/Desktop/cosasAcabadas/parser/plots/'
 		
 		for d in self.data: 
-			with PdfPages(('/nfs/pic.es/user/c/cperalta/python_envs/python_3.5.1/cosasAcabadas/parser/plots/'+d.parent_folder.split('/')[-2]+'.pdf')) as pdf:
-				print ("CARPETA : ", d.parent_folder, " ______ ")
+			with PdfPages((path+d.parent_folder.split('/')[-2]+'.pdf')) as pdf:
+				print ("FOLDER : ", d.parent_folder, " ______ ")
 				cs = self.split_data(d, max_size)
 
 				for c in cs : 
@@ -609,4 +608,3 @@ class Usage_Parser2():
 					self.io_plot(fig,gs2,d,c)
 					self.cpu_perc_plot(fig,gs2,d,c)
 					pdf.savefig()
-				print ("done")
