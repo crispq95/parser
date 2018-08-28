@@ -97,7 +97,7 @@ Output should be similar to :
 ![stats](img/stats_result.png)
 
 
-# usageparser_run 
+# usageparser_run.py
 
 Everything is prepared to run by executing up_run.py. 
 
