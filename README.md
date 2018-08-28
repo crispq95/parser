@@ -9,8 +9,8 @@ There are 2 main scripts on this project.
 	
 There are 2 folders on the project: 
 
-* conf : Stores the configuration file 
-* plots : Stores the plots created by usageparser_run.py calls. 
+* **conf** : Stores the configuration file 
+* **plots** : Stores the plots created by usageparser_run.py calls. 
 
 Every argument that can be used on usageparser_run.py is explained below on "usageparser_run" paragraph.
 

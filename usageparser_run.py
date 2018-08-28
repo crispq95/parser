@@ -7,7 +7,7 @@ import argparse
 CONFIG_PATH = '/home/cperalta/Desktop/cosasAcabadas/parser/conf/parser_config.conf'
 
 def str2bool(v):
-	if v.lower() in ('yes', 'true', 't', 'y', '1'):
+	if v.lower() in ('yes', 'true', 't', 'y', '1', ''):
 		return True
 	elif v.lower() in ('no', 'false', 'f', 'n', '0'):
 		return False
@@ -17,7 +17,7 @@ def str2bool(v):
 def parse_main_args():
 	parser = argparse.ArgumentParser(description="Order csv data by type of job and turn it into plots or get stats.")
 
-	parser.add_argument("--workdir", "-wdr", required=False, help="Logs folder path [example: /home/cperalta/Desktop/cpq/workdir_SC456_NIP_T1_*/]")
+	parser.add_argument("--workdir", "-wdr", required=False, help="Logs folder path [example: /pnfs/pic.es/data/astro/euclid/disk/storage/SC456/workdir_SC456_EXT_KIDS_T1_*/log]")
 	parser.add_argument("--jobs", "-j", required=False, help="Job list to be used, should be separated by commas. (example: SimExtDetector_pkg,SimPlanner_pkg,SimTU_pkg")
 	parser.add_argument("--size_job", "-sz", required=False, help="Job that will be used to choose the size of a plot.")
 
@@ -84,10 +84,11 @@ def main():
 	parser = up.Usage_Parser2(whole_workdir,jobs,mem=memory_limit, wr=iow_limit)
 
 	parser.load_data(jobs, set_size_job)
-	
+
 	if args.plot: 
 		parser.plot_all_jobs()
 	if args.stats : 
+		print ("stats")
 		parser.get_job_stats()
 
 
